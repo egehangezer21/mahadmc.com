@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElMahadMc - Ana Sayfa</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{
+background:#0b1220;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* ARKA PLAN */
+.bg{
+position:fixed;
+inset:0;
+z-index:-1;
+background:linear-gradient(-45deg,#0b1220,#111827,#0b1220,#1e293b);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+/* HEADER */
+h1{
+font-size:60px;
+color:#4ade80;
+margin-top:80px;
+}
+
+.card{
+margin-top:30px;
+display:inline-block;
+padding:20px;
+background:rgba(255,255,255,0.05);
+border-radius:12px;
+backdrop-filter:blur(10px);
+}
+
+.ip{
+font-size:18px;
+margin:15px 0;
+}
+
+/* BUTTONS */
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+}
+
+.copy{background:#4ade80;color:black}
+.discord{background:#5865F2;color:white}
+.vip{background:gold;color:black}
+
+.btn:hover{transform:scale(1.05)}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<h1>🎮 MahadMc</h1>
+
+<div class="card">
+
+<div class="ip">IP: <b id="ip">MahadMc.aternos.me</b></div>
+
+<button class="btn copy" onclick="copyIP()">📋 IP Kopyala</button>
+
+<a class="btn discord" href="https://discord.gg/KTApDngY" target="_blank">💬 Discord</a>
+
+<a class="btn vip" href="vip.html">💎 VIP Market</a>
+
+</div>
+
+<script>
+function copyIP(){
+navigator.clipboard.writeText(document.getElementById("ip").innerText);
+alert("IP kopyalandı!");
+}
+</script>
+
+</body>
+</html>
